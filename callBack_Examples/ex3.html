@@ -1,0 +1,32 @@
+<!-- Initialize two variables and increment both the variables and display the addition of
+both the variables at interval of 1 second. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+
+    <script>
+        function add(a,b)
+        {
+            var obj=document.getElementById("demo");
+            obj.innerHTML=(a+b);
+        }
+
+            a=2;
+            b=3;
+
+            setInterval
+            (function()
+            {
+                add(++a,++b);
+            },1000);
+        
+    </script>
+</body>
+</html>

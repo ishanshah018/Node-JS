@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+
+    <script>
+    font=15;
+
+    function f1()
+    {
+        x=document.getElementById("demo");
+        x.innerHTML="Ishan";
+        x.style.fontSize=font+"px";
+
+        if(font<=50)
+        {
+            font++;
+        }
+
+    }
+
+    setInterval(f1,1000)
+    </script>   
+</body>
+</html>
