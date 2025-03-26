@@ -1,0 +1,42 @@
+fs=require("fs");
+
+fs.writeFile("t2.txt","Hello ",(err)=>
+{
+    if(err)
+    {
+        console.log(err);
+    }
+    else
+    {
+        fs.appendFile("t2.txt"," Good Morning ",(err)=>
+        {
+            if(err)
+            {
+                console.log(err);
+            }
+            else
+            {
+                fs.rename("t2.txt","new.txt",(err)=>{
+                    if(err)
+                    {
+                        console.log(err);
+                    }
+                    else
+                    {
+                        fs.readFile("new.txt","utf-8",(err,data)=>
+                            {
+                                if(err)
+                                {
+                                    console.log(err);
+                                }
+                                else
+                                {
+                                    console.log(data);
+                                }
+                            })
+                    }
+                })
+            }
+        })
+    }
+})
