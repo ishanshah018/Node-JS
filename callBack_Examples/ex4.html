@@ -1,6 +1,6 @@
-<!-- Write code to increase the font size at interval of 1000 ms and it should stop
-increasing when the font size reaches to 50px. This task should be performed when
-you click on “Increase” button on browser. (Default font size = 15px) -->
+<!-- Write Node.Js code that display "Hello" with incresing font-size in interval of
+50 miliseconds in blue color. When font-size reaches to 50 pixel it should
+stop.-->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -10,12 +10,9 @@ you click on “Increase” button on browser. (Default font size = 15px) -->
     <title>Document</title>
 </head>
 <body>
-    <p id="demo">Ishan</p>
-    Click To Increase Font Size
-    <input type="button" value="Click" onclick="fun1()"/>
+    <p id="demo" style="color: blue;">Hello</p>
 
     <script>
-
         font=15;
 
         function f1(font)
@@ -23,16 +20,17 @@ you click on “Increase” button on browser. (Default font size = 15px) -->
             document.getElementById("demo").style.fontSize=font+"px";
         }
 
-        function fun1()
+        function myfun()
         {
-            setInterval(function()
-            {
+            setInterval(function(){
                 if(font<=50)
                 {
                     f1(font++);
                 }
-            },1000)
+            },50)
         }
+
+        myfun()
     </script>
 </body>
 </html>
